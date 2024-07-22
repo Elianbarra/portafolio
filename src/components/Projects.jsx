@@ -114,25 +114,23 @@ const [showColors, setShowColors] = useState(false);
                             <p>
                             The classic Pacman game where you have to eat all the points.
                             </p>
-                            {/* <Link to="/pacman" className="btn btn-default">
-                              Ver
-                            </Link> */}
                             {showPacman && <Pacman />}
                           </div>
                         </div>
                         <div className="col-sm-4">
-                        <a
-                          href="/login"
-                          title=""
-                          className="black-image-project-hover"
-                          onClick={() => setShowLogin(true)}
-                        >
-                          <img
-                            src={LoginImage} 
-                            alt="Work 5"
-                            className="img-responsive"
-                          />
-                        </a>
+                        <Link
+                            to="/login"
+                            title=""
+                            className="black-image-project-hover"
+                          >
+                            <img
+                              src={LoginImage}
+                              alt="Work 1"
+                              className="img-responsive"
+                              onClick={() => setShowLogin(true)}
+                            />
+                          </Link>
+
                         <div className="card-container card-container-lg">
                           <h4>02/05</h4>
                           <h3>Login</h3>
@@ -144,18 +142,18 @@ const [showColors, setShowColors] = useState(false);
                         </div>
                         </div>
                         <div className="col-sm-4">
-                          <a
-                            href="/calculadora"
+                        <Link
+                            to="/calculadora"
                             title=""
                             className="black-image-project-hover"
-                            onClick={() => setShowCalculadora(true)}
                           >
                             <img
-                              src={calculatorImage} 
-                              alt="Work 4"
+                              src={calculatorImage}
+                              alt="Work 1"
                               className="img-responsive"
+                              onClick={() => setShowCalculadora(true)}
                             />
-                          </a>
+                          </Link>
                           <div className="card-container card-container-lg">
                             <h4>03/05</h4>
                             <h3>Calculadora</h3>
@@ -167,23 +165,29 @@ const [showColors, setShowColors] = useState(false);
                           </div>
                         </div>
                       </div>
+                      
                      
 
 
 
                         <div className="col-sm-4">
-                          <a
-                            href="/gift"
+                          
+                        <Link
+                            to="/gift"
                             title=""
                             className="black-image-project-hover"
-                            onClick={() => setShowGift(true)}
                           >
                             <img
-                              src={gif} 
-                              alt="Work 4"
+                              src={gif}
+                              alt="Work 1"
                               className="img-responsive"
+                              onClick={() => setShowCalculadora(true)}
                             />
-                          </a>
+                          </Link>
+                          
+                          
+                          
+          
                           <div className="card-container card-container-lg">
                             <h4>04/05</h4>
                             <h3>Gift</h3>
@@ -197,19 +201,19 @@ const [showColors, setShowColors] = useState(false);
 
 
                         <div className="col-sm-4">
-                          <a
-                            href="/colors"
+                        <Link
+                            to="/colors"
                             title=""
                             className="black-image-project-hover"
-                            onClick={() => setShowColors(true)}
                           >
                             <img
                               src={colores}
-                              alt="Work 4"
+                              alt="Work 1"
                               className="img-responsive"
+                              onClick={() => setShowCalculadora(true)}
                             />
-                          </a>
-                          <div className="card-container card-container-lg">
+                          </Link>
+                            <div className="card-container card-container-lg">
                             <h4>05/05</h4>
                             <h3>Colors</h3>
                             <p>Colors search engine with API.</p>

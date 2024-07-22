@@ -5,7 +5,6 @@ import AboutMe from "./components/AboutMe.jsx";
 import Projects from "./components/Projects.jsx";
 import Contacts from "./components/Contact.jsx";
 import Pacman from './components/pacman.jsx'; 
-import Avion1942 from './components/avion.jsx'; // Asegúrate de reemplazar esto con la ruta correcta a tu componente
 import Calculadora from "./components/Calculadora.jsx";
 import Login from "./components/Login.jsx";
 import Gift from "./components/Gift.jsx";
@@ -18,13 +17,13 @@ const App = () => {
     <Router basename="/portafolio">
       <Navbar />
       <Routes>
-        
+
         <Route path="/" element={<Hero />} />
+        <Routes path="/Navbar" element={<Navbar />} />
         <Route path="/about" element={<AboutMe />} />
         <Route path="/works" element={<Projects />} />
         <Route path="/contact" element={<Contacts />} />
         <Route path="/pacman" element={<Pacman />} />
-        <Route path="/avion" element={<Avion1942 />} />
         <Route path="/calculadora" element={<Calculadora />} />
         <Route path="/login" element={<Login />} />
         <Route path="/homepage" element={<HomePage />} />
