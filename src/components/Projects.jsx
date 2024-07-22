@@ -185,7 +185,7 @@ const [showColors, setShowColors] = useState(false);
                             />
                           </a>
                           <div className="card-container card-container-lg">
-                            <h4>07/08</h4>
+                            <h4>04/05</h4>
                             <h3>Gift</h3>
                             <p>GIF search engine with API.</p>
                             {/* <Link to="/gift" className="btn btn-default">
@@ -210,7 +210,7 @@ const [showColors, setShowColors] = useState(false);
                             />
                           </a>
                           <div className="card-container card-container-lg">
-                            <h4>08/8</h4>
+                            <h4>05/05</h4>
                             <h3>Colors</h3>
                             <p>Colors search engine with API.</p>
                             {/* <Link to="/colors" className="btn btn-default">
