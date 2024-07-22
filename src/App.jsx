@@ -15,7 +15,7 @@ import Register from "./components/register.jsx";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/portafolio">
       <Navbar />
       <Routes>
         
