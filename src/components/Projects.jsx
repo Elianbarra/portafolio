@@ -227,8 +227,8 @@ const [showColors, setShowColors] = useState(false);
                         </div>
                     </div>
                     <div className="Comingsoon">
-                          NEWS PROJECTS COMING...
-                        </div>
+
+                    NEW PROJECTS COMING SOON...</div>
                   </div>
                 </div>
               </div>
