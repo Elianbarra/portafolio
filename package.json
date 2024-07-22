@@ -1,15 +1,13 @@
 {
   "name": "emojis",
   "private": true,
-  "homepage": "https://Elianbarra.github.io/portafolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
