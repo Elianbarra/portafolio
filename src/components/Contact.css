@@ -1,0 +1,21 @@
+.about,
+.contact,
+.projects {
+    margin: 0;
+    background: #fff;
+
+}
+.contact {
+    background-color: #ffffff;
+    width: 1876px;
+    min-height: 100vh;
+
+}
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+.icon-text {
+    align-items: center;
+    gap: 10px;
+}

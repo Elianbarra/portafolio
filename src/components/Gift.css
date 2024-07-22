@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+.bodygift{
+    font-family: 'Lato', sans-serif;
+    background-color: #fdfdfd;
+    min-height: 110vh;
+    width: 1876px;
+
+}
+
+.gift{
+  text-align: center;
+  margin-top: 3%;  
+  
+}
+
+.container-gifs {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 4%;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.container-gifs div img {
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+
+.error {
+  color: red;
+}
+
+p.author {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  gap: 7px;
+  color: #000;
+}
+p.author a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+}

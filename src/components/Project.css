@@ -1,0 +1,10 @@
+.projects {
+    overflow-y: auto;
+    min-height: 100vh;
+    height: 100%;
+    width: 1876px;
+
+}
+.Comingsoon{
+    text-align: center;
+}

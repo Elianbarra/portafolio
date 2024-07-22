@@ -1,0 +1,106 @@
+import  { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+function Register() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+
+    if (password !== confirmPassword) {
+      setErrorMessage("Passwords do not match.");
+      return;
+    }
+
+    if (localStorage.getItem(username)) {
+      setErrorMessage("The username is already in use.");
+    } else {
+      localStorage.setItem(
+        username,
+        JSON.stringify({ username: username, password: password })
+      );
+      alert("Successful registration! Please log in with your new account.");
+    }
+  };
+
+  return (
+
+        <div>
+          <div id="site-border-left"></div>
+          <div id="site-border-right"></div>
+          <div id="site-border-top"></div>
+          <div id="site-border-bottom"></div>
+          <header>
+            <nav className="navbar  navbar-fixed-top navbar-default">
+              <div className="container">
+                <div className="collapse navbar-collapse" id="navbar-collapse">
+                  <ul className="nav navbar-nav ">
+                    <li>
+                      <Link to="/">01 : Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/works">02 : Works</Link>
+                    </li>
+                    <li>
+                      <Link to="/about">03 : AboutMe</Link>
+                    </li>
+                    <li>
+                      <Link to="/contact">04 : Contact</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+        <div className="bodyregister">
+        <div className="container form-wrapper">
+        <div className="form-container">
+        <form id="register-form" onSubmit={handleRegister}>
+          <h2>Sign up</h2>
+          <div className="form-group">
+            <input
+              type="text"
+              id="register-username"
+              placeholder="Username"
+              required
+              pattern=".+@.+"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="password"
+              id="register-password"
+              placeholder="Password"
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              required
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+          <button type="submit">Sign up</button>
+          <p className="error-message">{errorMessage}</p>
+          <p>
+            ¿You have an account?{" "}
+            <Link to="/login">¡Login!</Link>
+          </p>
+        </form>
+      </div>
+    </div>
+    </div>
+    </div>
+
+  );
+}
+
+export default Register;

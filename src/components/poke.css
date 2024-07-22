@@ -1,0 +1,13 @@
+
+html,
+body {
+    min-height: 100vh;
+    background-color: var(--clr-gray);
+    overflow-y: scroll;
+}
+
+
+.Page{
+    background-color: #ffffff;
+    min-height: 150vh;
+}

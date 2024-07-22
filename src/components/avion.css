@@ -1,0 +1,99 @@
+.about,
+.contact,
+.projects {
+    margin: 0;
+    background: #fff;
+}
+
+.avion {
+    background-color: #ffffff;
+    min-height: 110vh;
+    width: 1876px;
+
+}
+.explosion {
+    /* Aquí puedes agregar tu imagen de explosión */
+    animation: fadeOut 1s forwards;
+}
+.enemy1,
+.enemy2 {
+    background-color: red;
+    /* O cualquier otro color */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-bottom: 0px;
+}
+
+#container {
+    background: url('../assets/images/galaxy.gif');
+    width: 900px;
+    height: 540px;
+    position: relative;
+    margin-top: 0px;
+    overflow:hidden;
+}
+ #hero {
+     background: url('../assets/images/1942.gif');
+     background-position: -85px -180px;
+     width: 28px;
+     height: 28px;
+     top: 50%; /* Ajusta este valor según sea necesario para mover el avión hacia arriba */
+    left: 50%; /* Ajusta este valor para centrar el avión horizontalmente, si es necesario */
+     position: absolute;
+     
+ }
+ 
+ .enemy {
+     background: url('../assets/images/1942.gif');
+     background-position: -30px -1px;
+     width: 28px;
+     height: 28px;
+     position: absolute;
+     
+ }
+
+ .enemy2 {
+     background: url('../assets/images/1942.gif');
+     background-position: -86px -86px;
+     width: 20px;
+     height: 25px;
+     position: absolute;
+ }
+
+ .bullet {
+     background: url('../assets/images/1942.gif');
+     background-position: -185px -400px;
+     width: 18px;
+     height: 18px;
+     position: absolute;
+ }
+.explosion {
+    animation: fadeOut 1s forwards;
+}
+.enemy1.explosion {
+    animation: fadeOut 1s forwards;
+}
+
+
+
+ #audio,
+ #audio1,
+ #audio2,
+ #audio3 {
+     display: none
+ }
