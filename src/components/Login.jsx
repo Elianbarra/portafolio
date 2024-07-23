@@ -98,10 +98,9 @@ const handleRegister = (event) => {
                     </div>
                     <blockquote>
                       <p>
-                        This project is called 2D airplane since it refers to
-                        the mythical and classic game from 1942.
+                      This project is made in react.jsx for login and registration.
                       </p>
-                      <small>Elian Barra.(coding-dojo)</small>
+                      <small></small>
                     </blockquote>
                     <div className="container form-wrapper">
                       <div className="form-container">
