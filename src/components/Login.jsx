@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import aboutMe from "./AboutMe.jsx";
+
 import Contact from "./Contact.jsx";
 import Home from "./home.jsx";
 import Project from "./Projects.jsx";

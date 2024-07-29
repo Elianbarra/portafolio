@@ -11,6 +11,7 @@ import Gift from "./components/Gift.jsx";
 import Colors from "./components/Colors.jsx";
 import HomePage from "./components/HomePage.jsx";
 import Register from "./components/register.jsx";
+import Tictactoe from "./components/tictactoe.jsx";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/gift" element={<Gift />} />
         <Route path="/colors" element={<Colors />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/tictactoe" element={<Tictactoe />} />
         </Routes>
     </Router>
 

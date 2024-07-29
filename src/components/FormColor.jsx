@@ -24,7 +24,7 @@ const FormColor = ({ setList }) => {
                 <input type="text" placeholder="#fff" onChange={e => setColor(e.target.value)} />
                 <input type="submit" value="Generar" />
             </form>
-            { error ? <p className="error">No existe este color...</p> :null }
+            { error ? <p className="error">This color does not exist...</p> :null }
         </div>
     );
 }

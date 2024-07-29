@@ -18,12 +18,15 @@ import Gift from "./Gift.jsx";
 import gif from "../assets/images/gifs.png";
 import Colors from "./Colors.jsx";
 import colores from "../assets/images/Colores.png";
+import Tictactoe from "./tictactoe.jsx";
+import tictactoe from "../assets/images/tictactoe.jpg";
 const Projects = () => {
 const [showLogin, setShowLogin] = useState(false);
 const [showCalculadora, setShowCalculadora] = useState(false);
 const [showPacman, setShowPacman] = useState(false);
 const [showGift, setShowGift] = useState(false);
 const [showColors, setShowColors] = useState(false);
+const [showTictactoe, setShowTictactoe] = useState(false);
   return (
     <div>
       <div className="projects">
@@ -109,7 +112,7 @@ const [showColors, setShowColors] = useState(false);
                             />
                           </Link>
                           <div className="card-container card-container-lg">
-                            <h4>01/05</h4>
+                            <h4>01/06</h4>
                             <h3>Pacman</h3>
                             <p>
                             The classic Pacman game where you have to eat all the points.
@@ -132,7 +135,7 @@ const [showColors, setShowColors] = useState(false);
                           </Link>
 
                         <div className="card-container card-container-lg">
-                          <h4>02/05</h4>
+                          <h4>02/06</h4>
                           <h3>Login</h3>
                           <p>Login to be able to implement it to some API</p>
                           {/* <Link to="/login" className="btn btn-default">
@@ -155,7 +158,7 @@ const [showColors, setShowColors] = useState(false);
                             />
                           </Link>
                           <div className="card-container card-container-lg">
-                            <h4>03/05</h4>
+                            <h4>03/06</h4>
                             <h3>Calculadora</h3>
                             <p>Basic calculator with CSS</p>
                             {/* <Link to="/calculadora" className="btn btn-default">
@@ -189,7 +192,7 @@ const [showColors, setShowColors] = useState(false);
                           
           
                           <div className="card-container card-container-lg">
-                            <h4>04/05</h4>
+                            <h4>04/06</h4>
                             <h3>Gifs</h3>
                             <p>GIF search engine with API.</p>
                             {/* <Link to="/gift" className="btn btn-default">
@@ -214,7 +217,7 @@ const [showColors, setShowColors] = useState(false);
                             />
                           </Link>
                             <div className="card-container card-container-lg">
-                            <h4>05/05</h4>
+                            <h4>05/06</h4>
                             <h3>Colors</h3>
                             <p>Colors search engine with API.</p>
                             {/* <Link to="/colors" className="btn btn-default">
@@ -223,9 +226,58 @@ const [showColors, setShowColors] = useState(false);
                             {showColors && <Colors />}
                           </div>
                         </div>
+
+
+
+
+
+
+                          {/* GAME TIC TAC TOE */}
+                        <div className="col-sm-4">
+                          
+                          <Link
+                              to="/tictactoe"
+                              title=""
+                              className="black-image-project-hover"
+                            >
+                              <img
+                                src={tictactoe}
+                                alt="Work 1"
+                                className="img-responsive"
+                                onClick={() => setShowTictactoe(true)}
+                              />
+                            </Link>
+                            
+                            
+                            
+            
+                            <div className="card-container card-container-lg">
+                              <h4>06/06</h4>
+                              <h3>Tic Tac Toe</h3>
+                              <p>Tic Tac Toe game made with react.jsx</p>
+                              {/* <Link to="/gift" className="btn btn-default">
+                                Ver
+                              </Link> */}
+                              {showTictactoe && <Tictactoe />}
+                            </div>
+                          </div>
+
+
+
+
+
                           </div>
                         </div>
+                        
                     </div>
+
+
+
+                          
+
+
+
+
                     <div className="Comingsoon">
 
                     NEW PROJECTS COMING SOON...</div>

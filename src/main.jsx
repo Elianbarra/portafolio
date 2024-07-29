@@ -13,8 +13,14 @@ import Gift from "./components/Gift.jsx";
 import Colors from "./components/Colors.jsx";
 import HomePage from "./components/HomePage.jsx";
 import Register from "./components/register.jsx";
+import Tictactoe from "./components/tictactoe.jsx";
 import {createHashRouter, RouterProvider} from 'react-router-dom'
+
+
+
+
 const router = createHashRouter([
+  
   {
     path: '/',
     element: <Hero />,
@@ -65,8 +71,14 @@ const router = createHashRouter([
     element: <Register />,
   
   },
+  {
+    path: '/tictactoe',
+    element: <Tictactoe />,
+  },
 
 ])
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}/>

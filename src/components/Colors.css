@@ -1,6 +1,6 @@
 .bodycolor{
     font-family: 'Lato', sans-serif;
-    background-color: #fdfdfd;
+    background-color: #ffffff;
     min-height: 110vh;
     width: 1876px;
 
@@ -83,6 +83,8 @@
 .form-color input[type="text"] {
     font-size: inherit;
     padding: 12px 13px;
+    background-color: rgb(68, 68, 68);
+    color : #ffffff;
     outline: none;
     border: 0;
     border-radius: 10px;
