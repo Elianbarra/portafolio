@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import TrackVisibility from "react-on-screen";
 import { Link } from "react-router-dom";
+import Curriculum from '../assets/images/Curriculum.pdf';
+
 
 export const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -115,15 +117,24 @@ export const Hero = () => {
                   </span>
                   <br />
                   <span>I'm a {text}</span>
+                  
                   <span id="typed"></span>
                   
+
                 </h1>
-              </div>
+
+                <div className="CV">
+                <a href={Curriculum} download>
+                <button>DOWNLOAD MY CV</button>
+                  </a>
+                  </div>
+              </div>              
             </div>
           </div>
         </div>
       </div>
     </div>
+    
     </>
   );
 };

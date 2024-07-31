@@ -11,6 +11,28 @@ html, body, #root {
 }
 
 
+.CV {
+    position: relative;
+    display: inline-block;
+}
+
+.CV button {
+    position: static;
+    color: #000000;
+    border-radius: 5px;
+    padding: 8px 25px;
+    font-weight: bold;
+    transition: 0.5s;
+    background-color: #ffffff; 
+    border: none; 
+    cursor: pointer;
+}
+
+.CV button:hover {
+    background-color: #8becec;
+}
+
+
 article,
 aside,
 details,
