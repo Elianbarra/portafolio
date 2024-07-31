@@ -119,9 +119,10 @@ export const Hero = () => {
                   <span>I'm a {text}</span>
                   
                   <span id="typed"></span>
-                  
+
 
                 </h1>
+                <a href={Curriculum} download="Curriculum.pdf" className="CV">DOWNLOAD MY CV</a>
 
               </div>              
             </div>

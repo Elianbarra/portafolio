@@ -14,23 +14,38 @@ html, body, #root {
 .CV {
     position: relative;
     display: inline-block;
-}
-
-.CV button {
-    position: static;
-    color: #000000;
+    margin-top: 20px;
+    background-color: #fdf8f8;
+    color: black !important; 
+    padding: 25px 30px;
+    font-size: 19px;
     border-radius: 5px;
-    padding: 8px 25px;
-    font-weight: bold;
-    transition: 0.5s;
-    background-color: #ffffff; 
-    border: none; 
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
+    font-weight: bold; 
+    font-family: 'Playfair Display', serif; 
+
+
+
 }
 
-.CV button:hover {
-    background-color: #8becec;
+.CV:hover {
+    background-color: #7c888a;
+    transform: scale(1.05);
 }
+
+.CV:active {
+    background-color: #033b49;
+    transform: scale(1);
+}
+
+.CV:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+
 
 
 article,
@@ -2907,9 +2922,9 @@ fieldset[disabled] .btn-default:hover {
 }
 
 .btn-primary {
-    color: #001aff;
+    color: #fdfdfd;
     background-color: transparent;
-    border-color: #001aff;
+    border-color: #f1f1f3;
 }
 
 .btn-primary.focus,
@@ -2923,9 +2938,9 @@ fieldset[disabled] .btn-default:hover {
 .btn-primary:active,
 .btn-primary:hover,
 .open>.btn-primary.dropdown-toggle {
-    color: #001aff;
+    color: #fdfdff;
     background-color: transparent;
-    border-color: #0014c2;
+    border-color: #f7f8fa;
 }
 
 .btn-primary.active.focus,
@@ -2937,9 +2952,9 @@ fieldset[disabled] .btn-default:hover {
 .open>.btn-primary.dropdown-toggle.focus,
 .open>.btn-primary.dropdown-toggle:focus,
 .open>.btn-primary.dropdown-toggle:hover {
-    color: #001aff;
+    color: #fefeff;
     background-color: transparent;
-    border-color: #000d80;
+    border-color: #f6f6fc;
 }
 
 .btn-primary.active,
