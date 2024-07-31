@@ -122,7 +122,6 @@ export const Hero = () => {
 
 
                 </h1>
-                <a href={Curriculum} download="Curriculum.pdf" className="CV">DOWNLOAD MY CV</a>
 
               </div>              
             </div>
