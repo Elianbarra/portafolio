@@ -158,8 +158,8 @@ function Tictactoe ()  {
                     <h2>
                         {
                             winner === false
-                            ? 'Empate'
-                            : `Ganó`
+                            ? 'Draw'
+                            : `Winner`
 
                         }
                     </h2>
@@ -167,7 +167,7 @@ function Tictactoe ()  {
                         {winner && <Square>{winner}</Square>}
                     </header>
                     <footer>
-                        <button onClick={resetGame}>Empezar De nuevo</button>
+                        <button onClick={resetGame}>Start again</button>
                     </footer>
 
                 </div></section>)

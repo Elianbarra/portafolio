@@ -11,12 +11,14 @@
     /* Añade un margen en la parte superior para separarla de otros elementos */
 }
 .Calculadoraa{
-    background-color: #fff;
-    height: auto;
-    width: auto;
-    padding: 20px;
-    width: 1876px;
-
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
+    padding: 20px; /* Añade un poco de padding para que el contenido no esté pegado al borde */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
 
 }
 .btn-operator{

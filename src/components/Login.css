@@ -2,11 +2,14 @@ html {
     font-family: sans-serif;
 }
 .bodyregister{
-    background-color: #fff; ;
-    min-height: 15vh;
-    width: 1876px;
-
-    height: 855px;
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
+    padding: 20px; /* Añade un poco de padding para que el contenido no esté pegado al borde */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
 
 }
 .form-wrapper {

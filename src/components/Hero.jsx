@@ -12,14 +12,14 @@ export const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(130 - Math.random() * 100); // Reducido para aumentar la velocidad
+  const [delta, setDelta] = useState(130 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const toRotate = [
     "Computer engineering student.",
     "Web Designer",
     "UI/UX Designer",
   ];
-  const period = 1500; // Reducido para aumentar la velocidad
+  const period = 1500;
 
   useEffect(() => {
     let ticker = setInterval(() => {

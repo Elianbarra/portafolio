@@ -2,17 +2,16 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 
-html {
+html,body {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    
+    
 }
 
 .container {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row-reverse;
-    align-items: flex-start;
+
 }
 
 .img-responsive2 {
@@ -21,63 +20,23 @@ html {
 .rowss {
     display: flex;
     justify-content: flex-end;
-    /* Alinea los elementos hijos a la derecha */
 }
 
 .img-responsive2 {
     margin-left: 10px;
-    /* Añade un espacio entre los iconos */
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-    display: block;
 }
 
-audio,
-canvas,
-progress,
-video {
-    display: inline-block;
-    vertical-align: baseline;
-}
 
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
-
-[hidden],
-template {
-    display: none;
-}
-
-.black-image-project-hover img {
-    width: 100%;
-    height: auto;
-}
-
-.carousel-inner {
-    display: flex;
-    justify-content: center;
-}
 .about-me {
     background-color: #ffffff;
-    min-height: 110vh;
-
-
-    width: 1876px;
-
+    width: 100%;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
+    padding: 20px; /* Añade un poco de padding para que el contenido no esté pegado al borde */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+    
 }
 
 a {
@@ -950,10 +909,7 @@ pre code {
     border-radius: 0;
 }
 
-.pre-scrollable {
-    max-height: 340px;
-    overflow-y: scroll;
-}
+
 
 
 /* Contenedores */
