@@ -3,9 +3,7 @@ import "./Hero.css";
 import F1Image from '../F1.jpg';
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import TrackVisibility from "react-on-screen";
 import { Link } from "react-router-dom";
-import Curriculum from '../assets/images/Curriculum.pdf';
 
 
 export const Hero = () => {

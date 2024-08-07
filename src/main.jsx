@@ -11,7 +11,6 @@ import Calculadora from "./components/Calculadora.jsx";
 import Login from "./components/Login.jsx";
 import Gift from "./components/Gift.jsx";
 import Colors from "./components/Colors.jsx";
-import HomePage from "./components/HomePage.jsx";
 import Register from "./components/register.jsx";
 import Tictactoe from "./components/tictactoe.jsx";
 import {createHashRouter, RouterProvider} from 'react-router-dom'
@@ -53,10 +52,6 @@ const router = createHashRouter([
   {
     path: '/login',
     element: <Login />,
-  },
-  {
-    path: '/homepage',
-    element: <HomePage />,
   },
   {
     path: '/gift',
