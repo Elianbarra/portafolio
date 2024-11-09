@@ -1,9 +1,5 @@
-import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import aboutMe from "./AboutMe.jsx";
 import Contact from "./Contact.jsx";
-import "./Project.css";
-
 import Home from "./home.jsx";
 import Project from "./Projects.jsx"; 
 import "./Aboutme.css";

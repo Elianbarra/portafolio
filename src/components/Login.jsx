@@ -111,7 +111,7 @@ const handleRegister = (event) => {
                               <input
                                 type="text"
                                 id="login-username"
-                                placeholder="Username"
+                                placeholder="Mail"
                                 required
                                 pattern=".+@.+"
                               />

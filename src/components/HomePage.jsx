@@ -38,7 +38,6 @@ export const HomePage = () => {
 
 
 
-              <h2>hola</h2>
 
 
 

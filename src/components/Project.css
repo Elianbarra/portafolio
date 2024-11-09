@@ -1,12 +1,13 @@
 .section-container{
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 .projects {
-    overflow-y: auto;
+    overflow: auto;
 
-
+}
+.text-center {
+    content: none;
 }
 .Comingsoon{
     text-align: center;

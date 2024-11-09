@@ -1,12 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import aboutMe from "./AboutMe.jsx";
-import Contact from "./Contact.jsx";
-import Home from "./home.jsx";
-import Project from "./Projects.jsx";
-import AboutMe from "./AboutMe.jsx";
+import { useState } from "react";
+import {  Link } from "react-router-dom";
 import fondo2 from "../assets/images/Fondo2.png";
-import Abion from "./Abion.jsx";
 import "./Calculadora.css";
 
 function Calculadora() {
