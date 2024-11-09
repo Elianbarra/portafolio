@@ -24,8 +24,8 @@ const Projects = () => {
 const [showLogin, setShowLogin] = useState(false);
 const [showCalculadora, setShowCalculadora] = useState(false);
 const [showPacman, setShowPacman] = useState(false);
-const [showGift, setShowGift] = useState(false);
-const [showColors, setShowColors] = useState(false);
+const [showGift] = useState(false);
+const [showColors] = useState(false);
 const [showTictactoe, setShowTictactoe] = useState(false);
   return (
     <div>

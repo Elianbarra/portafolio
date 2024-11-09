@@ -1,5 +1,7 @@
 import  { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./register.css";
+
 
 function Register() {
   const [username, setUsername] = useState("");
@@ -57,20 +59,20 @@ function Register() {
           </header>
         <div className="bodyregister">
         <div className="container form-wrapper">
-        <div className="form-container">
+        <div className="form-container-register">
         <form id="register-form" onSubmit={handleRegister}>
           <h2>Sign up</h2>
-          <div className="form-group">
+          <div className="form-group-register">
             <input
               type="text"
               id="register-username"
-              placeholder="Username"
+              placeholder="Mail"
               required
               pattern=".+@.+"
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group-register">
             <input
               type="password"
               id="register-password"
@@ -79,7 +81,7 @@ function Register() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group-register">
             <input
               type="password"
               id="confirm-password"
