@@ -277,10 +277,6 @@ const [showTictactoe, setShowTictactoe] = useState(false);
 
 
 
-
-                    <div className="Comingsoon">
-
-                    NEW PROJECTS COMING SOON...</div>
                   </div>
                 </div>
               </div>

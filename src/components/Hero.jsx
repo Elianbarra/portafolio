@@ -87,7 +87,7 @@ export const Hero = () => {
             </li>
             <li>
               <Link to="/about" title="">
-                03 : About me
+                03 : AboutMe
               </Link>
             </li>
             <li>
