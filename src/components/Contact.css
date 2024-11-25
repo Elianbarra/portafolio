@@ -1,26 +1,42 @@
-.about,
-.contact,
-.projects {
-    margin: 0;
-    background: #fff;
-
-}
 .contact {
     background-color: #fdfdfd;
     width: 100%;
     min-height: 110vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
-    padding: 20px; /* Añade un poco de padding para que el contenido no esté pegado al borde */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
-
+    align-items: flex-start;
+    /* Alinea el contenido al inicio del contenedor */
+    padding: 20px;
+    /* Añade un poco de padding para que el contenido no esté pegado al borde */
+    box-sizing: border-box;
+    /* Incluye el padding en el tamaño total del contenedor */
+    position: relative;
+    /* Asegura que los elementos hijos con posición absoluta se posicionen respecto a este contenedor */
 }
+
 .flex-row {
     display: flex;
     align-items: center;
 }
+
 .icon-text {
     align-items: center;
     gap: 10px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    position: absolute;
+    /* Posiciona el contenedor de contacto de forma absoluta */
+    bottom: 20px;
+    /* Ajusta según sea necesario para posicionar el contenedor en la parte inferior */
+    left: 20px;
+    /* Ajusta según sea necesario para posicionar el contenedor en la parte izquierda */
+}
+
+.contact-info {
+    margin-top: 20px;
 }

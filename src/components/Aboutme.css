@@ -9,18 +9,53 @@ html,body {
     
     
 }
+.about-me {
+    background-color: #fdfdfd;
+    width: 100%;
+    min-height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
 
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
+.icon-text {
+    align-items: center;
+    gap: 10px;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.static-content {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    right: 20px;
+}
+
+.image-container {
+    margin-top: 20px;
+}
 
 .img-responsive2 {
     margin-left: 10px;
 }
+
 .rowss {
     display: flex;
     justify-content: flex-end;
-}
-
-.img-responsive2 {
-    margin-left: 10px;
 }
 
 .about-me {
