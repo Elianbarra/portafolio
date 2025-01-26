@@ -7,22 +7,17 @@
     width: 300px;
     background-color: #fff;
     margin-top: 130px;
-    /* Mueve el contenedor 50 píxeles más abajo */
 }
 
 .Calculadoraa {
     background-color: #ffffff;
     width: 100%;
     min-height: 100vh;
-    /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* Alinea el contenido al inicio del contenedor */
     padding: 20px;
-    /* Añade un poco de padding para que el contenido no esté pegado al borde */
     box-sizing: border-box;
-    /* Incluye el padding en el tamaño total del contenedor */
 }
 
 .btn-operator {
@@ -39,9 +34,7 @@
 
 .buttons button {
     width: 50px;
-    /* Ajusta este valor según el tamaño que desees */
     height: 50px;
-    /* Ajusta este valor según el tamaño que desees */
     margin: 5px;
 }
 
@@ -56,11 +49,8 @@
 .theme-toggler {
     position: absolute;
     top: 23%;
-    /* Centra verticalmente en relación al contenedor */
     left: calc(100% + -400px);
-    /* Mueve el elemento al costado derecho de la calculadora y sepáralo por 2 píxeles */
     transform: translateY(-50%);
-    /* Ajusta para centrar verticalmente */
     color: #fff;
     cursor: pointer;
     z-index: 1;
