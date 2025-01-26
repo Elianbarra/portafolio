@@ -1,4 +1,3 @@
-import react from 'react';
 import { useState } from 'react';
 import "./Colors.css";
 import { Link } from "react-router-dom";

@@ -22,7 +22,7 @@ const FormColor = ({ setList }) => {
             <h1>Color Palette Generator</h1>
             <form onSubmit={ handleGenerator }>
                 <input type="text" placeholder="#fff" onChange={e => setColor(e.target.value)} />
-                <input type="submit" value="Generar" />
+                <input type="submit" value="Search" />
             </form>
             { error ? <p className="error">This color does not exist...</p> :null }
         </div>

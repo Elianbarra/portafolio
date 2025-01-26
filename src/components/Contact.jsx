@@ -34,7 +34,7 @@ export const Contact = () => {
     setText(updatedText);
 
     if (isDeleting) {
-      setDelta(85); // Ajusta la velocidad de borrado a un valor fijo
+      setDelta(85); 
     } else {
       setDelta(150 - Math.random() * 100);
     }
@@ -103,12 +103,7 @@ export const Contact = () => {
 
                   <div className="contact-container">
                     <ul className="list-unstyled contact-info">
-                      <li className="icon-text">
-                        <span className="fa-icon">
-                          <i className="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                        <b>+56 9 4932 9327</b>
-                      </li>
+
                       <li className="icon-text">
                         <span className="fa-icon">
                           <i className="fa fa-at" aria-hidden="true"></i>

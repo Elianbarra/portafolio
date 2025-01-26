@@ -2,7 +2,6 @@ import "./Hero.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-
 export const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -10,7 +9,7 @@ export const Hero = () => {
   const [delta, setDelta] = useState(1000 - Math.random() * 1000);
   const [setIndex] = useState(1);
   const toRotate = [
-    "Computer engineering student.",
+    "Computer engineering student.", //Error de traduccion con chrome "Cambiar"
     "Web Designer",
     "UI/UX Designer",
   ];
@@ -53,6 +52,7 @@ const tick = () => {
     setIndex((prevIndex) => prevIndex + 1);
   }
 };
+
 
   return (
     <>

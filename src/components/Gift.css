@@ -1,63 +1,65 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
-.bodygift{
+
+.bodygift {
     font-family: 'Lato', sans-serif;
     background-color: #fdfdfd;
     width: 100%;
-    min-height: 110vh;
+    height: 100vh; /* Cambiado de min-height: 110vh */
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
-    padding: 20px; /* Añade un poco de padding para que el contenido no esté pegado al borde */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
-    
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    justify-content: center; /* Alinea el contenido al centro vertical */
+    align-items: center; /* Alinea el contenido al centro horizontal */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Evita que el contenido provoque scroll */
 }
 
-.gift{
-  text-align: center;
-  margin-top: 3%;  
-  
+.gift {
+    text-align: center;
+    margin-top: 0; /* Ajustado para evitar desplazamientos */
 }
 
 .container-gifs {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 4%;
-  justify-content: center;
-  padding: 0 5%;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 5%;
+    max-height: 70%; /* Limita la altura para evitar desbordamientos */
+    overflow-y: auto; /* Permite desplazamiento interno si es necesario */
 }
 
 .container-gifs div img {
-  border-radius: 18px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .gift_container input {
-  background-color: rgb(160, 160, 160);
-  height: 70px;
-  width: 1000px;
-  border: none;
-  color: white
+    background-color: rgb(160, 160, 160);
+    height: 70px;
+    width: 1000px;
+    border: none;
+    color: white;
+    max-width: 90%; /* Ajusta el tamaño para pantallas más pequeñas */
 }
 
 .error {
-  color: red;
+    color: red;
 }
 
 p.author {
-  display: flex;
-  justify-content: center;
-  margin-top: 3%;
-  gap: 7px;
-  color: #ff0000;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    gap: 7px;
+    color: #ff0000;
 }
+
 p.author a {
-  text-decoration: none;
-  font-weight: 700;
-  color: #fc0000;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fc0000;
 }

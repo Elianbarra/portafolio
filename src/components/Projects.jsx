@@ -168,10 +168,6 @@ const [showTictactoe, setShowTictactoe] = useState(false);
                           </div>
                         </div>
                       </div>
-                      
-                     
-
-
 
                         <div className="col-sm-4">
                           
