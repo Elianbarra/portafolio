@@ -85,8 +85,8 @@ const [showTictactoe, setShowTictactoe] = useState(false);
             <div className="row">
               <div className="col-sm-8 col-sm-offset-2 section-container-spacer">
                 <div className="text-center">
-                  <h1 className="h2">WORKS</h1>
-                  <p>These are some of my projects that I work on. 👨‍💻</p>
+                  <h1 className="h2">02 : Works</h1>
+                  <p>These are some of my projects that I work on.</p>
                 </div>
               </div>
 

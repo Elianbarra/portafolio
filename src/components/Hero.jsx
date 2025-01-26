@@ -1,13 +1,16 @@
+import React from "react";
 import "./Hero.css";
+import F1Image from '../F1.jpg';
 import { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(1000 - Math.random() * 1000);
-  const [setIndex] = useState(1);
+  const [delta, setDelta] = useState(130 - Math.random() * 100);
+  const [index, setIndex] = useState(1);
   const toRotate = [
     "Computer engineering student.", //Error de traduccion con chrome "Cambiar"
     "Web Designer",
@@ -24,34 +27,33 @@ export const Hero = () => {
       clearInterval(ticker);
     };
   }, [text]);
-const tick = () => {
-  let i = loopNum % toRotate.length;
-  let fullText = toRotate[i];
-  let updatedText = isDeleting
-    ? fullText.substring(0, text.length - 1)
-    : fullText.substring(0, text.length + 1);
 
-  setText(updatedText);
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
 
-  if (isDeleting) {
-    setDelta(85); // Ajusta la velocidad de borrado a un valor fijo
-  } else {
-    setDelta(200 - Math.random() * 100); // Ajusta la velocidad de escritura
-  }
+    setText(updatedText);
 
-  if (!isDeleting && updatedText === fullText) {
-    setIsDeleting(true);
-    setIndex((prevIndex) => prevIndex - 1);
-    setDelta(period);
-  } else if (isDeleting && updatedText === "") {
-    setIsDeleting(false);
-    setLoopNum(loopNum + 1);
-    setIndex(1);
-    setDelta(500);
-  } else {
-    setIndex((prevIndex) => prevIndex + 1);
-  }
-};
+    if (isDeleting) {
+      setDelta((prevDelta) => prevDelta / 2);
+    }
+
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setIndex((prevIndex) => prevIndex - 1);
+      setDelta(period);
+    } else if (isDeleting && updatedText === "") {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setIndex(1);
+      setDelta(500);
+    } else {
+      setIndex((prevIndex) => prevIndex + 1);
+    }
+  };
 
 
   return (
