@@ -9,55 +9,45 @@
     background-color: #fdfdfd;
     width: 100%;
     height: 100vh;
-    /* Asegura que ocupe exactamente la altura de la ventana */
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
     align-items: flex-start;
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
-    /* Elimina el scroll solo en esta sección */
     position: relative;
     margin: 0;
-    /* Asegura que no haya márgenes adicionales */
+    }
+.animated-text {
+  height: 1.5em; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
 }
-=======
-    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
-    padding: 20px; /* Añade un poco de padding para que el contenido no esté pegado al borde */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
->>>>>>> parent of c3df43a (Change front-end)
 
-}
 .flex-row {
     display: flex;
     align-items: center;
 }
 .icon-text {
     display: flex;
-    /* Asegura que los íconos y textos estén alineados */
     align-items: center;
     gap: 10px;
 }
-<<<<<<< HEAD
+
 
 .contact-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    /* Mantiene la posición fija relativa al contenedor principal */
     bottom: 20px;
-    /* Ubicado en la parte inferior */
     left: 20px;
-    /* Asegura la posición desde el borde izquierdo */
     max-width: calc(100% - 40px);
-    /* Evita desbordamientos horizontales */
     max-height: calc(100% - 40px);
-    /* Evita desbordamientos verticales */
     box-sizing: border-box;
     overflow: hidden;
-    /* Previene scroll dentro del contenedor de contacto */
 }
 
 .contact-info {
@@ -66,10 +56,6 @@
     flex-direction: column;
     gap: 10px;
     list-style: none;
-    /* Elimina los puntos de lista */
     padding: 0;
     overflow: hidden;
-    /* Asegura que no haya scroll dentro de la lista */
 }
-=======
->>>>>>> parent of c3df43a (Change front-end)

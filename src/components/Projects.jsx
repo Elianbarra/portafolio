@@ -1,32 +1,75 @@
-import { Routes, Route, Link, } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import AboutMe from "./AboutMe.jsx";
 import Contact from "./Contact.jsx";
 import Home from "./home.jsx";
 import Project from "./Projects.jsx";
-import { useState } from "react";
 import "./Project.css";
 import "./Front-End.css";
 import calculatorImage from "../assets/images/Calculadora.png";
 import NinjaImage from "../assets/images/Ninja.png";
 import LoginImage from "../assets/images/Login.png";
-import Pacman from './pacman.jsx';
+import gif from "../assets/images/gifs.png";
+import colores from "../assets/images/Colores.png";
+import tictactoe from "../assets/images/tictactoe.jpg";
+import Pacman from "./pacman.jsx";
 import AvionGame from "./avion.jsx";
 import Calculadora from "./Calculadora.jsx";
 import Login from "./Login.jsx";
 import Pokedex from "./HomePage.jsx";
 import Gift from "./Gift.jsx";
-import gif from "../assets/images/gifs.png";
 import Colors from "./Colors.jsx";
-import colores from "../assets/images/Colores.png";
 import Tictactoe from "./tictactoe.jsx";
-import tictactoe from "../assets/images/tictactoe.jpg";
+
+const AnimatedText = () => {
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300); 
+  const toRotate = ["02 : Works"];
+  const period = 1500;
+
+  useEffect(() => {
+    const handleTick = () => {
+      const i = loopNum % toRotate.length;
+      const fullText = toRotate[i];
+      const updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
+
+      setText(updatedText);
+
+      if (isDeleting) {
+        setDelta(85);
+      } else {
+        setDelta(150 - Math.random() * 100);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setDelta(period); 
+      } else if (isDeleting && updatedText === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setDelta(500); 
+      }
+    };
+
+    const ticker = setTimeout(handleTick, delta);
+    return () => clearTimeout(ticker);
+  }, [text, delta, isDeleting, loopNum]);
+
+  return <h1 className="h2 animated-text">{text}</h1>;
+};
+
 const Projects = () => {
-const [showLogin, setShowLogin] = useState(false);
-const [showCalculadora, setShowCalculadora] = useState(false);
-const [showPacman, setShowPacman] = useState(false);
-const [showGift] = useState(false);
-const [showColors] = useState(false);
-const [showTictactoe, setShowTictactoe] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [showCalculadora, setShowCalculadora] = useState(false);
+  const [showPacman, setShowPacman] = useState(false);
+  const [showGift] = useState(false);
+  const [showColors] = useState(false);
+  const [showTictactoe, setShowTictactoe] = useState(false);
+
   return (
     <div>
       <div className="projects">
@@ -47,20 +90,15 @@ const [showTictactoe, setShowTictactoe] = useState(false);
               <div className="collapse navbar-collapse" id="navbar-collapse">
                 <ul className="nav navbar-nav ">
                   <li>
-                    {" "}
                     <Link to="/">01 : Home</Link>
                   </li>
                   <li>
-                    {" "}
                     <Link to="/works">02 : Works</Link>
                   </li>
-
                   <li>
-                    {" "}
                     <Link to="/about">03 : AboutMe</Link>
                   </li>
                   <li>
-                    {" "}
                     <Link to="/contact">04 : Contact</Link>
                   </li>
                 </ul>
@@ -85,7 +123,8 @@ const [showTictactoe, setShowTictactoe] = useState(false);
             <div className="row">
               <div className="col-sm-8 col-sm-offset-2 section-container-spacer">
                 <div className="text-center">
-                  <h1 className="h2">02 : Works</h1>
+
+                  <AnimatedText />
                   <p>These are some of my projects that I work on.</p>
                 </div>
               </div>
@@ -138,9 +177,7 @@ const [showTictactoe, setShowTictactoe] = useState(false);
                           <h4>02/06</h4>
                           <h3>Login</h3>
                           <p>Login to be able to implement it to some API</p>
-                          {/* <Link to="/login" className="btn btn-default">
-                            Ver
-                          </Link> */}
+
                           {showLogin && <Login />}
                         </div>
                         </div>
@@ -161,9 +198,6 @@ const [showTictactoe, setShowTictactoe] = useState(false);
                             <h4>03/06</h4>
                             <h3>Calculadora</h3>
                             <p>Basic calculator with CSS</p>
-                            {/* <Link to="/calculadora" className="btn btn-default">
-                              Ver
-                            </Link> */}
                             {showCalculadora && <Calculadora />}
                           </div>
                         </div>
@@ -191,9 +225,7 @@ const [showTictactoe, setShowTictactoe] = useState(false);
                             <h4>04/06</h4>
                             <h3>Gifs</h3>
                             <p>GIF search engine with API.</p>
-                            {/* <Link to="/gift" className="btn btn-default">
-                              Ver
-                            </Link> */}
+
                             {showGift && <Gift />}
                           </div>
                         </div>
@@ -216,9 +248,7 @@ const [showTictactoe, setShowTictactoe] = useState(false);
                             <h4>05/06</h4>
                             <h3>Colors</h3>
                             <p>Colors search engine with API.</p>
-                            {/* <Link to="/colors" className="btn btn-default">
-                              Ver
-                            </Link> */}
+
                             {showColors && <Colors />}
                           </div>
                         </div>
@@ -228,7 +258,6 @@ const [showTictactoe, setShowTictactoe] = useState(false);
 
 
 
-                          {/* GAME TIC TAC TOE */}
                         <div className="col-sm-4">
                           
                           <Link
@@ -251,9 +280,7 @@ const [showTictactoe, setShowTictactoe] = useState(false);
                               <h4>06/06</h4>
                               <h3>Tic Tac Toe</h3>
                               <p>Tic Tac Toe game made with react.jsx</p>
-                              {/* <Link to="/gift" className="btn btn-default">
-                                Ver
-                              </Link> */}
+
                               {showTictactoe && <Tictactoe />}
                             </div>
                           </div>

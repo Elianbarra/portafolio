@@ -1,60 +1,54 @@
-import React from "react";
+import  { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import aboutMe from "./AboutMe.jsx";
-import Contact from "./Contact.jsx";
+import AboutMe from "./AboutMe.jsx";
 import Home from "./home.jsx";
-import Project from "./Projects.jsx"; 
+import Project from "./Projects.jsx";
 import "./Contact.css";
-<<<<<<< HEAD
 
 export const Contact = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(1000 - Math.random() * 1000);
-  const [setIndex] = useState(1);
+  const [delta, setDelta] = useState(300); // Velocidad inicial
   const toRotate = ["CONTACT ME"];
   const period = 1500;
 
   useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
+    const handleTick = () => {
+      const i = loopNum % toRotate.length;
+      const fullText = toRotate[i];
+      const updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
 
-    return () => {
-      clearInterval(ticker);
+      setText(updatedText);
+
+      if (isDeleting) {
+        setDelta(85);
+      } else {
+        setDelta(150 - Math.random() * 100);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setDelta(period); // Pausa antes de borrar
+      } else if (isDeleting && updatedText === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setDelta(500); // Pausa antes de escribir
+      }
     };
-  }, [text]);
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
+    const ticker = setTimeout(handleTick, delta);
+    return () => clearTimeout(ticker);
+  }, [text, delta, isDeleting, loopNum]);
 
-    setText(updatedText);
+  return (
+    <h1 className="h2 animated-text">{text}</h1>
+  );
+};
 
-    if (isDeleting) {
-      setDelta(85); 
-    } else {
-      setDelta(150 - Math.random() * 100);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(500);
-    }
-  };
-
-=======
-import AboutMe from "./AboutMe.jsx";
 const Contacts = () => {
->>>>>>> parent of c3df43a (Change front-end)
   return (
     <div>
       <div className="contact">
@@ -75,20 +69,15 @@ const Contacts = () => {
               <div className="collapse navbar-collapse" id="navbar-collapse">
                 <ul className="nav navbar-nav ">
                   <li>
-                    {" "}
                     <Link to="/">01 : Home</Link>
                   </li>
                   <li>
-                    {" "}
                     <Link to="/works">02 : Works</Link>
                   </li>
-
                   <li>
-                    {" "}
                     <Link to="/about">03 : AboutMe</Link>
                   </li>
                   <li>
-                    {" "}
                     <Link to="/contact">04 : Contact</Link>
                   </li>
                 </ul>
@@ -103,15 +92,15 @@ const Contacts = () => {
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+
         <div className="section-container">
           <div className="container">
             <div className="row">
               <div className="col-xs-12">
                 <div className="section-container-spacer text-center">
-                  <h1 className="h2">04 : Contact me</h1>
+                  <Contact />
                 </div>
 
-                <p>Immediate availability.</p>
                 <div
                   className="contact-container"
                   style={{
@@ -123,12 +112,6 @@ const Contacts = () => {
                   <ul className="list-unstyled">
                     <li className="icon-text">
                       <span className="fa-icon">
-                        <i className="fa fa-phone" aria-hidden="true"></i>
-                      </span>
-                      <b>+56 9 4932 9327</b>
-                    </li>
-                    <li className="icon-text">
-                      <span className="fa-icon">
                         <i className="fa fa-at" aria-hidden="true"></i>
                       </span>
                       <b>elianbarra@gmail.com</b>
@@ -136,7 +119,7 @@ const Contacts = () => {
                     <li className="icon-text">
                       <span className="fa-icon">
                         <i
-                          className="fa fa fa-map-marker"
+                          className="fa fa-map-marker"
                           aria-hidden="true"
                         ></i>
                       </span>
@@ -145,39 +128,6 @@ const Contacts = () => {
                   </ul>
                 </div>
               </div>
-<<<<<<< HEAD
-            </nav>
-          </header>
-
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/works" element={<Project />} />
-            <Route path="/about" element={<AboutMe />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-          <div className="section-container">
-            <div className="container">
-              <div className="row">
-                <div className="col-xs-12">
-                  <div className="section-container-spacer text-center">
-                    <h1 className="h2">{text}</h1>
-                  </div>
-
-                  <div className="contact-container">
-                    <ul className="list-unstyled contact-info">
-
-                      <li className="icon-text">
-                        <span className="fa-icon">
-                          <i className="fa fa-at" aria-hidden="true"></i>
-                        </span>
-                        <b>elianbarra@gmail.com</b>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-=======
->>>>>>> parent of c3df43a (Change front-end)
             </div>
           </div>
         </div>
