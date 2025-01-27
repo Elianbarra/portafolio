@@ -4,37 +4,20 @@
     font-family: 'Lato', sans-serif;
     background-color: #fdfdfd;
     width: 100%;
-    height: 100vh; /* Cambiado de min-height: 110vh */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    justify-content: center; /* Alinea el contenido al centro vertical */
-    align-items: center; /* Alinea el contenido al centro horizontal */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    overflow: hidden; /* Evita que el contenido provoque scroll */
+    gap: 20px;
 }
 
 .gift {
     text-align: center;
-    margin-top: 0; /* Ajustado para evitar desplazamientos */
-}
-
-.container-gifs {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 5%;
-    max-height: 70%; /* Limita la altura para evitar desbordamientos */
-    overflow-y: auto; /* Permite desplazamiento interno si es necesario */
-}
-
-.container-gifs div img {
-    border-radius: 18px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
+    margin-top: 33px;
+    padding-top: 1px;
 }
 
 .gift_container input {
@@ -43,7 +26,26 @@
     width: 1000px;
     border: none;
     color: white;
-    max-width: 90%; /* Ajusta el tamaño para pantallas más pequeñas */
+    max-width: 90%;
+    margin-top: 1px;
+}
+
+.container-gifs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1%;
+    margin-top: 10px;
+    max-height: 70%;
+}
+
+.container-gifs div img {
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .error {

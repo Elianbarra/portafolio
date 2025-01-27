@@ -10,7 +10,7 @@ export const Contact = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300); // Velocidad inicial
-  const toRotate = ["CONTACT ME"];
+  const toRotate = ["04 : CONTACT ME"];
   const period = 1500;
 
   useEffect(() => {
@@ -116,16 +116,10 @@ const Contacts = () => {
                       </span>
                       <b>elianbarra@gmail.com</b>
                     </li>
-                    <li className="icon-text">
-                      <span className="fa-icon">
-                        <i
-                          className="fa fa-map-marker"
-                          aria-hidden="true"
-                        ></i>
-                      </span>
-                      <b>Las amapolas #9628 La florida, Santiago, Chile</b>
-                    </li>
                   </ul>
+                  <div className="contact-form">
+                      Form to contact soon...
+                  </div>
                 </div>
               </div>
             </div>

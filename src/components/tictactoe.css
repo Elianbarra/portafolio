@@ -34,7 +34,7 @@
     padding: 8px 12px;
     font-weight: bold;
     transition: 0.2s;
-    margin-left: -45px; /* Ajusta este valor según sea necesario */
+    margin-left: -45px; 
 
   }
   .board {
@@ -57,7 +57,7 @@
     margin: 25px;
     background: transparent;
     border: 2px solid #ffffff;
-    color: #eee;
+    color: #ff0000;
     width: 100px;
     border-radius: 5px;
     transition: 0.2s;
@@ -79,16 +79,15 @@
   .turn {
     display: flex;
     justify-content: center;
-    margin: 15px auto;
+    margin: 25px auto;
     width: fit-content;
-    position: relative;
     border-radius: 10px;
   }
   
   .turn .square,
   .winner .square {
-    width: 70px;
-    height: 70px;
+    width:85px;
+    height: 90px;
     pointer-events: none;
     border-color: transparent;
   }

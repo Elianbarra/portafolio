@@ -35,10 +35,6 @@ function Gift(){
               </div>
             </nav>
           </header>
-
-
-        {/* DE ACA PARA ABAJO ES EL CODE GIFT */}
-
         <div className="bodygift">
         <div className="gift">
                 <h2>Gif Search</h2>
