@@ -11,7 +11,6 @@ document.body.addEventListener("mousemove", () => {
     video.play();
   }
 
-  // Reinicia el temporizador cada vez que el mouse se mueve
   clearTimeout(mouseMoveTimeout);
   mouseMoveTimeout = setTimeout(() => {
     video.pause(); // Pausa el video si el mouse está quieto
