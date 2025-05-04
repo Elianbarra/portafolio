@@ -57,7 +57,6 @@
       }, 200); // Pausa después de 2 segundos sin movimiento
     });
 
-    // Pausa el video cuando el mouse sale del cuerpo
     document.body.addEventListener('mouseleave', () => {
       video.pause();
       clearTimeout(mouseMoveTimeout);
