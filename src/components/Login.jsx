@@ -6,7 +6,6 @@ import Home from "./home.jsx";
 import Project from "./Projects.jsx";
 import AboutMe from "./AboutMe.jsx";
 import fondo2 from "../assets/images/Fondo2.png";
-import Abion from "./Abion.jsx";
 import "./Login.css";
 
 function Login() {
@@ -58,7 +57,7 @@ const handleRegister = (event) => {
 };
   return (
     <>
-      <div className="avion">
+      <div className="Login">
         <div>
           <div id="site-border-left"></div>
           <div id="site-border-right"></div>
@@ -194,7 +193,6 @@ const handleRegister = (event) => {
         <Route path="/works" element={<Project />} />
         <Route path="/about" element={<AboutMe />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/abion" element={<Abion />} />
       </Routes>
     </>
   );

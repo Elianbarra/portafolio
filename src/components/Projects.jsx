@@ -13,7 +13,6 @@ import gif from "../assets/images/gifs.png";
 import colores from "../assets/images/Colores.png";
 import tictactoe from "../assets/images/tictactoe.jpg";
 import Pacman from "./pacman.jsx";
-import AvionGame from "./avion.jsx";
 import Calculadora from "./Calculadora.jsx";
 import Login from "./Login.jsx";
 import Pokedex from "./HomePage.jsx";
@@ -72,6 +71,7 @@ const Projects = () => {
 
   return (
     <div>
+
       <div className="projects">
         <div id="site-border-left"></div>
         <div id="site-border-right"></div>
@@ -113,7 +113,6 @@ const Projects = () => {
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/pacman" component={Pacman} />
-          <Route path="/avion1942" component={AvionGame} />
           <Route path="/calculadora" component={Calculadora} />
           <Route path="/login" component={Login} />
           <Route path="/pokedex" component={Pokedex} />
@@ -197,7 +196,7 @@ const Projects = () => {
                           <div className="card-container card-container-lg">
                             <h4>03/06</h4>
                             <h3>Calculadora</h3>
-                            <p>Basic calculator with CSS</p>
+                            <p>Basic calculator with Java And CSS</p>
                             {showCalculadora && <Calculadora />}
                           </div>
                         </div>

@@ -8,11 +8,6 @@ function Colors(){
     const [list, setList] = useState(new Values('red').all(5));
     console.log(list);
 
-
-
-
-
-
     return(
 <div className="pokedexx">
         <div>
@@ -42,8 +37,6 @@ function Colors(){
               </div>
             </nav>
           </header>
-
-
         {/* DE ACA PARA ABAJO ES EL CODE GIFT */}
 
         <div className="bodycolor">

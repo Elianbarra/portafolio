@@ -20,6 +20,8 @@
     "react-on-screen": "^2.1.1",
     "react-router-dom": "^6.25.1",
     "react-spring": "^9.7.3",
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "^3.8.1",
     "values.js": "^2.1.1"
   },
   "devDependencies": {

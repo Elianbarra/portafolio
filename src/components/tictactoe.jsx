@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import './tictactoe.css';
-import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
+import { useState } from 'react';
 const TURNS = {
     X: '❌',
     O: '⚪'
 }
-const board = Array(9).fill(null);
 
 const Square = ({ children, updateBoard, index, isSelected }) => {
     const className = `square ${isSelected ? 'is-selected' : ''}`

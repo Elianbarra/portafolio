@@ -9,6 +9,7 @@ import Javaimage from "../assets/images/js-logo.webp.png";
 import Pythonimage from "../assets/images/Python_logo_51.svg.png";
 import react from "../assets/images/React.gif";
 import css from "../assets/images/css.png";
+import Java from "../assets/images/java-4.svg";
 
 const AnimatedText = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -179,6 +180,13 @@ const AboutMe = () => {
                           src={css}
                           className="img-responsive2"
                           alt="css logo"
+                          width={120}
+                          height={100}
+                        />
+                        <img
+                          src={Java}
+                          className="img-responsive2"
+                          alt="Java logo"
                           width={120}
                           height={100}
                         />

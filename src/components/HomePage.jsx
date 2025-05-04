@@ -4,8 +4,8 @@ import Contact from "./Contact.jsx";
 import Home from "./home.jsx";
 import Project from "./Projects.jsx";
 import AboutMe from "./AboutMe.jsx";
-import Abion from "./Abion.jsx";
 import "./poke.css";
+
 export const HomePage = () => {
   return (
     <>
@@ -35,14 +35,6 @@ export const HomePage = () => {
                   </ul>
                 </div>
               </div>
-
-
-
-
-
-
-
-
             </nav>
           </header> 
             </div>
@@ -54,7 +46,6 @@ export const HomePage = () => {
         <Route path="/works" element={<Project />} />
         <Route path="/about" element={<AboutMe />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/abion" element={<Abion />} />
       </Routes>
     </>
   );

@@ -1,4 +1,3 @@
-import React from 'react';
 import useApi from '../hooks/useApi';
 import ImageItem from './ImageItem';
 

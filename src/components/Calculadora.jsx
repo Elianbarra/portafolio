@@ -235,7 +235,8 @@ function Calculadora() {
                           3
                         </button>
                       </td>
-                      <td rowspan="2">
+                      
+                      <td rowSpan="2">
                         <button
                           className="btn-equal"
                           id="equal"
@@ -244,6 +245,9 @@ function Calculadora() {
                           =
                         </button>
                       </td>
+
+
+
                     </tr>
                     <tr>
                       <td>

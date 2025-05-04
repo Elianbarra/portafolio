@@ -16,7 +16,7 @@ export const Hero = () => {
     "Web Designer",
     "UI/UX Designer",
   ];
-  const period = 1500;
+  const period = 2000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
