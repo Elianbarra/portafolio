@@ -5,7 +5,6 @@ video.addEventListener("loadeddata", () => {
   video.pause();
 });
 
-// Reproduce el video cuando el mouse se mueve
 document.body.addEventListener("mousemove", () => {
   if (video.paused) {
     video.play();
