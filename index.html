@@ -22,7 +22,7 @@
       object-fit: cover;
     }
   </style>
-  <script type="module" crossorigin src="https://Elianbarra.github.io/portafolio/assets/index-BnBN8cQG.js"></script>
+  <script type="module" crossorigin src="https://Elianbarra.github.io/portafolio/assets/index-RNU7POgN.js"></script>
   <link rel="stylesheet" crossorigin href="https://Elianbarra.github.io/portafolio/assets/index-DYWeMoES.css">
 </head>
 
@@ -33,7 +33,36 @@
     Your browser does not support the video tag.
   </video>
 
-  <div id="root"></div>
+  <!-- Contenido principal -->
+  <div id="root"></div>
+
+  <script>
+    const video = document.getElementById('background-video');
+    let mouseMoveTimeout;
+
+    video.addEventListener('loadeddata', () => {
+      video.pause();
+    });
+
+    // Reproduce el video cuando el mouse se mueve
+    document.body.addEventListener('mousemove', () => {
+      if (video.paused) {
+        video.play();
+      }
+
+      // Reinicia el temporizador cada vez que el mouse se mueve
+      clearTimeout(mouseMoveTimeout);
+      mouseMoveTimeout = setTimeout(() => {
+        video.pause(); // Pausa el video si el mouse está quieto
+      }, 200); // Pausa después de 2 segundos sin movimiento
+    });
+
+    // Pausa el video cuando el mouse sale del cuerpo
+    document.body.addEventListener('mouseleave', () => {
+      video.pause();
+      clearTimeout(mouseMoveTimeout);
+    });
+  </script>
 </body>
 
 </html>
