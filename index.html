@@ -39,6 +39,7 @@
     const video = document.getElementById('background-video');
     let mouseMoveTimeout;
 
+    // Pausa el video inicialmente
     video.addEventListener('loadeddata', () => {
       video.pause();
     });
@@ -53,9 +54,10 @@
       clearTimeout(mouseMoveTimeout);
       mouseMoveTimeout = setTimeout(() => {
         video.pause(); // Pausa el video si el mouse está quieto
-      }, 200); // Pausa después de 2 segundos sin movimiento
+      }, 500); // Pausa después de 2 segundos sin movimiento
     });
 
+    // Pausa el video cuando el mouse sale del cuerpo
     document.body.addEventListener('mouseleave', () => {
       video.pause();
       clearTimeout(mouseMoveTimeout);
