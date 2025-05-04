@@ -19,6 +19,11 @@
     align-items: flex-start;
     box-sizing: border-box;
     overflow: hidden;
+        overflow: auto;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            z-index: 1;
+            position: relative;
 }
 
 .btn-operator {

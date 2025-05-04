@@ -6,7 +6,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            /* Asegura que el z-index funcione */
+            z-index: 1;
+            /* Coloca este contenedor encima del video */
 }
 
 html {

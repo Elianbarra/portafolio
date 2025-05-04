@@ -7,6 +7,12 @@
     background-color: #fdfdfd;
     width: 100%;
     height: 100vh;
+                padding: 20px;
+                    box-sizing: border-box;
+                    position: relative;
+                    /* Asegura que el z-index funcione */
+                    z-index: 1;
+                    /* Coloca este contenedor encima del video */
     }
 .animated-text {
   height: 1.5em; 

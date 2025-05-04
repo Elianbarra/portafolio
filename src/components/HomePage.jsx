@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Contact from "./Contact.jsx";
 import Home from "./home.jsx";

@@ -12,22 +12,21 @@ html {
 
 }
 
-.bodycolor {
+.Login {
     font-family: 'Lato', sans-serif;
     background-color: #ffffff;
+    /* Fondo blanco */
     width: 100%;
     min-height: 100vh;
-    /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* Alinea el contenido al inicio del contenedor */
     padding: 20px;
-    /* Añade un poco de padding para que el contenido no esté pegado al borde */
     box-sizing: border-box;
-    /* Incluye el padding en el tamaño total del contenedor */
-
-
+    position: relative;
+    /* Asegura que el z-index funcione */
+    z-index: 1;
+    /* Coloca este contenedor encima del video */
 }
 
 

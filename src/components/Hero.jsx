@@ -1,9 +1,7 @@
-import React from "react";
 import "./Hero.css";
-import F1Image from '../F1.jpg';
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
 
 export const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
